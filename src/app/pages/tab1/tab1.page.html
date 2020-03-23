@@ -1,0 +1,27 @@
+<ion-header no-border>
+    <!-- no-border es un atributo personalizado del ion-header -->
+    <ion-toolbar color='dark'>
+        <ion-title>
+            Pendientes
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color='dark'>
+
+    <app-listas [terminada]="false"></app-listas>
+    <!-- [terminada]=false refiere al Input de listas.component. Donde dependiendo la ruta devolvera a tab1 o tab2 -->
+
+
+
+    <!-- Boton de agregar -->
+    <!-- fab placed to the top end -->
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <!-- Fixed para que no se mueva cuando hago scroll. -->
+        <ion-fab-button color="secondary " (click)="agregarLista() ">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+
+</ion-content>
